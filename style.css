@@ -1,0 +1,262 @@
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    justify-content: flex-start;
+    
+}
+.navLinks{
+    list-style-type:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navLinks li{
+    padding: 20px;
+}
+
+.navButton{
+    margin-top: 20px;
+}
+.button{
+    background-color: #8733A3; 
+    border: none; 
+    color: white; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    padding: 10px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.button:hover{
+    background-color: #4A1C59;
+}
+
+.carousel{
+    position: relative;
+    width: 100%;
+}
+
+.carousel img{
+    width: 100%;
+    height: auto;
+}
+
+.carousel .button{
+    position: absolute;
+    top:75%;
+    left: 12%;
+}
+
+.callToAction{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "adoptCard donateCard fosterCard volunteerCard";
+}
+
+.adoptCard{
+    grid-area: adoptCard;
+    margin: auto 25px;
+}
+
+.donateCard{
+    grid-area: donateCard;
+    margin: auto 25px;
+}
+.fosterCard{
+    grid-area: fosterCard;
+    margin: auto 25px;
+}
+
+.volunteerCard{
+    grid-area: volunteerCard;
+    margin: auto 25px;
+}
+.icon, .label, .description {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.buttonCard{
+    position:static;
+    margin: 25px 50px;
+}
+footer{
+    background-color: #4A1C59;
+    color: white;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 65% 1fr 1fr;
+    grid-template-areas: 
+    "footerLinks emailField"
+    "socialHandles socialHandles"
+    "legal legal";
+}
+
+#footerLinks{
+    list-style-type: none;
+    grid-area: footerLink;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+#footerLinks li{
+    padding: 5px;
+    justify-content: start;
+}
+#about{
+    border-bottom: 2px solid white;
+    width: fit-content;
+}
+#volunteer{
+    border-bottom: 2px solid white;
+    width: fit-content;
+}
+#contact{
+    border-bottom: 2px solid white;
+    width: fit-content;
+}
+#footerAddress{
+    list-style-type: none;
+    grid-area: footerAddress;
+    justify-content: start;
+    align-content: center;
+}
+
+#emailField{
+    grid-area: emailField;
+}
+
+#footerButton{
+    background-color: #FFC839;
+    color: #4A1C59;
+}
+
+#footerButton:hover {
+    background-color: white;
+}
+#socialHandles{
+    grid-area: socialHandles;
+    justify-self: center;
+    align-content: center;
+}
+
+#legal{
+    grid-area: legal;
+    justify-items: center;
+    align-content: center;
+    margin: 0 auto;
+    height: 30px;
+}
+
+input{
+    height: 35px;
+    width: 250px;
+}
+h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+}
+
+h4{
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    color: #4A1C59;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #4A1C59;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #4A1C59;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #FFC839;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+@media only screen and (max-width: 600px) {
+    .navLinks {
+      display: none;
+    }
+    .navButton {
+      margin-left: auto;
+    }
+    .button{
+        padding: 5px 15px;
+        font-size: 16px;
+    }
+  
+    footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 2fr 1fr 1fr;
+        grid-template-areas: 
+        "footerLinks"
+        "emailField"
+        "socialHandles" 
+        "legal";
+    }
+    #footerLinks{
+        text-align: center;
+    }
+    #emailField{
+        margin: auto 5%;
+    }
+    #legal{
+        margin: auto 5%;
+        text-align: center;
+    }
+
+}
